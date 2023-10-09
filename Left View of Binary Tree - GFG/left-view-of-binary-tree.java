@@ -122,24 +122,28 @@ class Node
 }*/
 class Tree
 {
-    //Function to return list containing elements of left view of binary tree.
-    ArrayList<Integer> leftView(Node root)
-    {
-      ArrayList<Integer> arr = new ArrayList<>();
-      left(arr,root,0);
-      return arr;
+    /*
+    Intialized a arraylist globally we are doing preorder traversal( ro le ri) and passing a varaible level
+    and adding the data if list size==level so that we can add every node in level
+    */
+    ArrayList<Integer> arr= new ArrayList<>();
+    ArrayList<Integer> leftView(Node node) {
+        //add code here.
+        left(node,0);
+        return arr;
     }
-    public void left(ArrayList<Integer> arr,Node root,int c)
+    void left(Node root,int level)
     {
         if(root==null)
         {
-            return ;
+            return;
         }
-        if(c==arr.size())
+        if(arr.size()==level)
         {
             arr.add(root.data);
         }
-        left(arr,root.left,c+1);
-        left(arr,root.right,c+1);
-    }
+        left(root.left,level+1);
+        left(root.right,level+1);
+        
+}
 }

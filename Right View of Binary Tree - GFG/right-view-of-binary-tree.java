@@ -130,8 +130,11 @@ class Node
 
 class Solution{
     //Function to return list containing elements of right view of binary tree.
-    
-        ArrayList<Integer> arr= new ArrayList<>();
+    /*
+    Intialized a arraylist globally we are doing reverse preorder traversal( ro ri le) and passing a varaible level
+    and adding the data if list size==level so that we can add every node in level
+    */
+    ArrayList<Integer> arr= new ArrayList<>();
     ArrayList<Integer> rightView(Node node) {
         //add code here.
         right(node,0);

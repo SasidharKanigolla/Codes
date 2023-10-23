@@ -29,7 +29,7 @@ class Solution
         if(s1.length()!=s2.length())
         return false;
         int c=0;
-        ArrayList<Character> arr = new ArrayList<>();
+        ArrayList<Character> arr = new ArrayList<>(2);
         for(int i=0;i<s1.length();i++)
         {
             if(c==0&&s1.charAt(i)!=s2.charAt(i))

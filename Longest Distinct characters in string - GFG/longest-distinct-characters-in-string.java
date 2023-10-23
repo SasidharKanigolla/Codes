@@ -36,11 +36,11 @@ class Solution{
             char a =s.charAt(i);
             if(map.containsKey(a)==true)
             {
-               while(j<i&&map.containsKey(a)) 
-               {
-                   map.remove(s.charAt(j));
-                   j++;
-               }
+              while(j<i&&map.containsKey(a)) 
+              {
+                  map.remove(s.charAt(j));
+                  j++;
+              }
             }
             
                 map.put(a,0);
@@ -49,5 +49,21 @@ class Solution{
             max=Math.max(i-j+1,max);
         }
         return max;
+        // String str="";
+        // for(int i=0;i<s.length();i++)
+        // {
+        //     for(int j=i+1;j<s.length();j++)
+        //     {
+        //         if(s.charAt(i)!=s.charAt(j))
+        //         {
+        //             str=s.substring(i,j);
+        //         }
+        //         else
+        //         {
+        //             i=j+1;
+        //         }
+        //     }
+        // }
+        // return str.length();
     }
 }
